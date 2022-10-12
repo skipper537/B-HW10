@@ -1,0 +1,173 @@
+html, body{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+body{
+	background-color: rgb(0, 0, 0);
+}
+.djeday{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+}
+.top-bracket{
+	width: 500px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;  
+}
+.lines{
+	height: 20px;
+	background: white;
+	display: flex;
+	justify-content: flex-start;
+	transition: transform 3s ease 1s, background-color 3s ease 1s;
+    border-radius: 100px;
+}
+
+.first-gap{
+	background-color: black;
+	width: 50px;
+	height: 20px;
+	margin-left: 10px;
+}
+.second-gap{
+	background-color: black;
+	width: 50px;
+	height: 20px;
+	margin-right: 10px;
+	margin-left: auto;
+}
+.third-gap{
+	background-color: black;
+	width: 50px;
+	height: 20px;
+	margin-left: 10px;
+}
+.top-bracket:hover .first-line{
+	transform: translateY(0px) ;
+	background-color: #cfcfcf;
+	box-shadow: 14px 0px 29px 4px rgb(149, 253, 245);
+}
+.top-bracket:hover .third-line{
+	transform: translateY(-50px) rotate(-10deg);
+	background-color: #cfcfcf;
+	box-shadow: 15px 0px 29px 4px rgb(154, 143, 252);
+}
+.top-bracket:hover .second-line{
+	transform: translateY(0px) rotate(10deg);
+	background-color: #cfcfcf;
+	box-shadow: -15px 0px 29px 4px rgb(255, 104, 104);
+
+}
+
+.newtballs{
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom-section{
+	width: 400px;
+	height: 40%;
+	position: relative;
+    
+}
+
+
+.balls {
+	position: absolute;
+	top: 80px;
+  	width: 41px;
+  	height: 41px;
+  	border-radius: 50%;
+   background: linear-gradient(90deg, rgba(9,105,121,1) 50%, rgba(0,255,111,1) 100%);
+}
+
+.ball1{
+	left: 70px;
+	animation-name: circle-left;
+  	animation-duration: 0.5s;
+  	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+    background: #096d7e;
+}
+.ball2{
+	left: 111px;
+    background: linear-gradient(90deg, rgb(14, 162, 188) 59%, rgb(24, 177, 156) 100%);
+}
+.ball3{
+	left: 152px;
+    background: #00ffde;
+}
+.ball4{
+	left: 193px;
+    background: linear-gradient(90deg, rgb(25, 184, 162) 59%, rgb(29, 171, 105) 100%);
+}
+.ball5{
+	left: 234px;
+    background: linear-gradient(90deg, rgb(22, 174, 103) 46%, rgb(28, 169, 113) 100%);
+}
+.ball6{
+	left: 275px;
+    background: linear-gradient(90deg, rgb(25, 169, 111) 0%, rgb(25, 180, 92) 40%);
+}
+.ball7{
+	left: 316px;
+	animation-name: circle-right;
+  	animation-duration: 0.5s;
+  	animation-delay: 0.5s;
+  	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+    background: #18b35b;
+}
+
+@keyframes circle-left {
+	0%{
+		
+	}
+	25%{
+		margin-left: -5px;
+		margin-top: -5px;
+	}
+	50%{
+		margin-left: -10px;
+		margin-top: -10px;
+	}
+    75%{
+		margin-left: -15px;
+		margin-top: -15px;
+	}
+	100%{
+		margin-left: -20px;
+		margin-top: -20px;
+	}
+}
+@keyframes circle-right {
+	0%{
+		
+	}
+	25%{
+		margin-left: 5px;
+		margin-top: -5px;
+	}
+	50%{
+		margin-left: 10px;
+		margin-top: -10px;
+	}
+	75%{
+		margin-left: 15px;
+		margin-top: -15px;
+	}
+	100%{
+		margin-left: 20px;
+		margin-top: -20px;
+	}
+}
+
+
